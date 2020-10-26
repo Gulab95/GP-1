@@ -16,10 +16,6 @@ const routes: Routes =
     path: '' , component: HomeComponent ,
     children: 
     [
-      // { 
-      //   path: '' , redirectTo: 'pathway' , pathMatch: 'full'
-      // },
-
       { 
         path: 'pathway', component: PathwayComponent
       }

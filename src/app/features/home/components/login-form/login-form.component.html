@@ -1,0 +1,36 @@
+
+<div nz-row nzJustify="center" nzAlign="middle">
+    <div nz-col nzSpan="10">
+
+<form nz-form  class="login-form" nzLayout="vertical" [formGroup]="myForm" (ngSubmit)="submitForm()">
+<h1>Login Into Your Account</h1>
+    <nz-form-item >
+        <nz-form-label>User Name</nz-form-label>
+      <nz-form-control nzErrorTip="Please input your username!">
+        <nz-input-group nzPrefixIcon="user">
+          <input type="text" nz-input formControlName="userName" placeholder="Username" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    
+      <nz-form-item>
+        <nz-form-label>Password</nz-form-label>
+        <nz-form-control nzErrorTip="Please input your Password!">
+          <nz-input-group nzPrefixIcon="lock">
+            <input type="Password" nz-input formControlName="userPassword" placeholder="Password" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+
+      
+
+    <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" [disabled]="!myForm.valid">Login</button>
+    Or <a (click)="goToSignUpPage()">Sign Up</a>
+  </form>
+</div>
+</div>
+
+
+<h1> Pipes</h1>
+

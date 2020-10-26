@@ -1,0 +1,72 @@
+
+<div nz-row nzJustify="center" nzAlign="middle">
+    <div nz-col nzSpan="10">
+
+<form nz-form  class="login-form" nzLayout="vertical" [formGroup]="myForm" (ngSubmit)="submitForm()">
+<h1>Register New User</h1>
+    <nz-form-item >
+        <nz-form-label>User Name</nz-form-label>
+      <nz-form-control nzErrorTip="Please input your username!">
+        <nz-input-group nzPrefixIcon="user">
+          <input type="text" nz-input formControlName="userName" placeholder="Username" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+        <nz-form-label>User Email</nz-form-label>
+        <nz-form-control nzErrorTip="Please input your Email!">
+          <nz-input-group nzPrefixIcon="lock">
+            <input type="email" nz-input formControlName="email" placeholder="Email" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label>Password</nz-form-label>
+        <nz-form-control nzErrorTip="Please input your Password!">
+          <nz-input-group nzPrefixIcon="lock">
+            <input type="Password" nz-input formControlName="Password" placeholder="Password" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+
+    <nz-form-item>
+        <nz-form-label>Confirm Password</nz-form-label>
+      <nz-form-control nzErrorTip="Please input your ConfirmPassword!">
+        <nz-input-group nzPrefixIcon="lock">
+          <input type="password" nz-input formControlName="confirmPassword" placeholder="Confirm Password" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label>Branches</nz-form-label>
+    <nz-form-control nzErrorTip="Please input your ConfirmPassword!">
+      <nz-checkbox-wrapper style="width: 100%;" (nzOnChange)="log($event)">
+        <div nz-row>
+          <div nz-col nzSpan="8"><label nz-checkbox nzValue="CS" formControlName="branches">Computer Engg.</label></div>
+          <div nz-col nzSpan="8"><label nz-checkbox nzValue="ECS">Electronic Engg.</label></div>
+          <div nz-col nzSpan="8"><label nz-checkbox nzValue="CIVIL">Civil Engg.</label></div>
+          <div nz-col nzSpan="8"><label nz-checkbox nzValue="MECH">Mechanical Engg.</label></div>
+        </div>
+      </nz-checkbox-wrapper>
+    </nz-form-control>
+  </nz-form-item>
+   
+
+    <!-- <div nz-row class="login-form-margin">
+      <div nz-col [nzSpan]="12">
+        <label nz-checkbox formControlName="remember">
+          <span>Remember me</span>
+        </label>
+      </div>
+      <div nz-col [nzSpan]="12">
+        <a class="login-form-forgot">Forgot password</a>
+      </div>
+    </div> -->
+
+    <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" [disabled]="!myForm.valid">Sign Up</button>
+    Or <a (click)="goToSignInPage()"> Sign In! </a>
+  </form>
+</div>
+</div>

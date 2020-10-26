@@ -1,0 +1,83 @@
+<!-- 
+<ng-container>
+
+
+<div nz-row>
+  <div nz-col nzSpan="24">
+    <app-medium-header></app-medium-header>
+  </div>
+</div>
+
+
+<div nz-row >
+  <div nz-col nzSpan="24">
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  </div>
+</div>
+
+
+<div nz-row>
+  <div nz-col  nzSpan="24">
+    <h1>Footer For Application</h1>
+  </div>
+</div>
+
+
+</ng-container> -->
+
+<nz-layout >
+
+  <!-- APP-HEADER -->
+  <nz-header>
+    <app-medium-header></app-medium-header>
+  </nz-header>
+
+   <!-- APP-MAIN-BODY -->
+  <nz-layout style="overflow: 'auto'; min-height: 40vw;">
+
+    <!-- SLIDER -->
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" >
+
+      <ul nz-menu style="background: black; color: white" nzMode="inline">
+        <li nz-submenu nzTitle="User" nzIcon="user">
+          <ul>
+            <li nz-menu-item>Tom</li>
+            <li nz-menu-item>Bill</li>
+            <li nz-menu-item>Alex</li>
+          </ul>
+        </li>
+        <li nz-submenu nzTitle="Team" nzIcon="team">
+          <ul>
+            <li nz-menu-item>Team 1</li>
+            <li nz-menu-item>Team 2</li>
+          </ul>
+        </li>
+        <li nz-menu-item>
+          <i nz-icon nzType="file"></i>
+          <span>File</span>
+        </li>
+      </ul>
+
+    </nz-sider>
+    
+    <!-- MAIN CONTENT -->
+    <nz-content>
+      <router-outlet></router-outlet>
+    </nz-content>
+
+  </nz-layout>
+  
+  <!-- APP FOOTER -->
+  <!-- <nz-footer>
+    <app-welcome></app-welcome>
+  </nz-footer> -->
+
+</nz-layout>
+
+
+
+
+
+

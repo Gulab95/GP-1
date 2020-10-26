@@ -1,0 +1,28 @@
+
+
+
+  <div nz-row   >
+    <div nz-col nzSpan="4" style="padding: 10px;" class="gutter-row" *ngFor="let movie of movieList">
+  
+        <nz-card nzHoverable  [nzCover]="coverTemplate">
+            <nz-card-meta [nzTitle]="movie.Title" nzJustify="center" ></nz-card-meta>
+          </nz-card>
+          <ng-template #coverTemplate>
+            <img alt="example" [src]="movie.imgPath" />
+          </ng-template>
+    </div>
+
+  
+       
+    </div>
+
+    <!-- <div nz-row [nzGutter]="[hGutter, vGutter]">
+        <div nz-col class="gutter-row" [nzSpan]="24 / count" *ngFor="let i of array">
+          <div class="grid-config">Column</div>
+        </div>
+        <div nz-col class="gutter-row" [nzSpan]="24 / count" *ngFor="let i of array">
+          <div class="grid-config">Column</div>
+        </div>
+      </div> -->
+
+     
